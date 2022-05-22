@@ -23,7 +23,7 @@ class EmojisMemoryGame: ObservableObject{
     
     static func createThemeList() -> ThemeHolder{
         ThemeHolder(givenThemeList: {
-            return [ThemeHolder.Theme<String>(peopleEmojis, color: "red", name:"People Theme", gid: 0),
+            [ThemeHolder.Theme<String>(peopleEmojis, color: "red", name:"People Theme", gid: 0),
                     ThemeHolder.Theme<String>(flagsEmojis, color: "cyan", name:"Flags Theme", gid: 1),
                     ThemeHolder.Theme<String>(animalsEmojis, color: "green", name:"Animals Theme", gid: 2)]
         })
@@ -79,7 +79,7 @@ class EmojisMemoryGame: ObservableObject{
         cardsModel = EmojisMemoryGame.createMemoryGame()
     }
     
-    func getActualTheme()-> ThemeHolder.Theme<String>?{
+    func getActualTheme() -> ThemeHolder.Theme<String>?{
         themesModel.getActualTheme()
     }
     
